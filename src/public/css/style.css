@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: 'Baloo Thambi 2', cursive;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+.header {
+    margin: 40px;
+}
+
+.flex-container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item{
+    box-shadow: 0 0 20px gray;
+    border-radius: 5px;
+    border-top: 2px solid red;
+    height: 400px;
+    width: 400px;
+    margin: 20px;
+}
+
+.four-cards {
+    background: url('/images/link-images/desktop-design.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.signup-form {
+    background: url('/images/link-images/desktop-design copy.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.pricing-cards {
+    background: url('/images/link-images/active-states.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.overlay-card1, .overlay-card2, .overlay-card3 {
+    position: absolute;
+    display: none;
+    background: rgba(247,120,118, 0.9);
+    box-shadow: 0 0 20px gray;
+    border-radius: 5px;
+    border-top: 2px solid red;
+    height: 400px;
+    width: 400px;
+}
+
+.card-title {
+    font-size: 40px;
+    color: white;
+}
+
+.four-cards:hover .overlay-card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form:hover .overlay-card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-cards:hover .overlay-card3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
