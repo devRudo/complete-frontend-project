@@ -1,0 +1,30 @@
+{
+  "name": "complete-frontend-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "12.16.0"
+  },
+  "scripts": {
+    "test-dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/devRudo/complete-frontend-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devRudo/complete-frontend-project/issues"
+  },
+  "homepage": "https://gitlab.com/devRudo/complete-frontend-project#readme",
+  "dependencies": {
+    "dotenv-extended": "^2.7.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
