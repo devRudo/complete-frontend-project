@@ -1,0 +1,186 @@
+/* Primary
+Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+Neutral
+Very Light Grayish Blue: hsl(240, 78%, 98%)
+Light Grayish Blue: hsl(234, 14%, 74%)
+Grayish Blue: hsl(233, 13%, 49%)
+Dark Grayish Blue: hsl(232, 13%, 33%)
+Typography
+Body Copy
+Font size: 15px
+Font
+Family: Montserrat
+Weight: 700 */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+:root {
+    --primary-color-gradient-start: hsl(236, 72%, 79%);
+    --primary-color-gradient-end: hsl(237, 63%, 64%);
+    --neutral-color-vlgb: hsl(240, 78%, 98%);
+    --neutral-color-lgb: hsl(234, 14%, 74%);
+    --neutral-color-gb: hsl(233, 13%, 49%);
+    --neutral-color-dgb: hsl(232, 13%, 33%)
+}
+
+/* linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end)) */
+
+@media (max-width: 1920px) and (min-width: 501px) {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        padding: 100px 200px;
+    }
+
+    .container {
+        background: var(--neutral-color-vlgb);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .background-top {
+        order: 2;
+        align-self: flex-start;
+    }
+    .background-bottom{
+        order: 0;
+        align-self: flex-end;
+    }
+
+    .main-content{
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content .title {
+        color: var(--neutral-color-dgb);
+        margin-bottom: 20px;
+    }
+
+    .plans{
+        color: var(--neutral-color-lgb);
+        display: flex;
+        justify-content: center;
+    }
+    .plans span {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .plans input {
+        width: 50px;
+        background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 2px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .plans input:focus {
+        outline: none;
+    }
+
+    .plans input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: var(--neutral-color-vlgb);
+        border-radius: 50%;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+    }
+
+    .container {
+        background-color: var(--primary-color-red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .background{
+        background-image: url('/images/signup-form/bg-intro-mobile.png');
+    }
+
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-content{
+        text-align: center;
+        color: white;
+        margin: 80px 10px;
+    }
+
+    .form-content{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-title{
+        background: var(--accent-color-blue);
+        color: white;
+        padding: 15px 60px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 7px 0px rgba(0,0,0,0.3);
+    }
+
+    .form {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 40px 0;
+        border-radius: 8px;
+        box-shadow: 0 7px 2px rgba(0,0,0,0.3);
+    }
+
+    .form input{
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 2px solid var(--neutral-color-grayishblue);
+    }
+
+    .submit {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: none;
+        background: var(--primary-color-green);
+        color: white;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: 0 7px 0px rgba(76,180,141, 1);
+    }
+
+    .form:last-child {
+        text-align: center;
+    }
+
+    .form:last-child .text-red {
+        color: var(--primary-color-red);
+    }
+
+}
