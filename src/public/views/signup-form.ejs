@@ -20,19 +20,23 @@
                 </div>
                 <div class="flex-item form-content">
                     <p class="form-title"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
-                    <form action="" class="form">
-                        <input type="text" name="first_name" placeholder="First Name" required>
-                        <input type="text" name="last_name" placeholder="Last Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <button type="submit" class="submit">Claim your free trial</button>
+                    <form action="" id="signup-form" class="form" method="get">
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" oninvalid="return validateFirstName()" required>
+                        <span id="firstname_error"></span>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" oninvalid="return validateLastName()" required>
+                        <span id="lastname_error"></span>
+                        <input type="email" id="email" name="email" placeholder="Email Address" oninvalid="return validateEmail()" required>
+                        <span id="email_error"></span>
+                        <input type="password" id="password" name="password" placeholder="Password" oninvalid="return validatePassword()" required>
+                        <span id="password_error"></span>
+                        <button type="submit" id="submit" name="submit" class="submit">Claim your free trial</button>
                         <small>By clicking the button, you are agreeing to our <b class="text-red">Terms and Services</b></small>
                     </form>
                 </div>
             </div>
         </div>
-
     </main>
+    <script src="/js/signup-form.js"></script>
 </body>
 
 </html>
