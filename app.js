@@ -32,6 +32,10 @@ app.get('/pricing-cards', (request, response) => {
     response.render('pricing-cards');
 });
 
+app.get('/four-cards-with-flex', (request, response) => {
+    response.render('four-cards-flexbox');
+});
+
 app.listen(port, () => {
     console.log(`Web app is running on ${port}`);
 });

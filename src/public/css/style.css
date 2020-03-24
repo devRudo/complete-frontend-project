@@ -1,160 +1,95 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
 
-@media (max-width: 1920px) and (min-width: 501px){
-    body {
-        box-sizing: border-box;
-        font-family: 'Baloo Thambi 2', cursive;
-        text-align: center;
-    }
-
-    .header {
-        margin: 40px;
-    }
-
-    .flex-container {
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .flex-item{
-        box-shadow: 0 0 20px gray;
-        border-radius: 5px;
-        border-top: 2px solid red;
-        height: 400px;
-        width: 400px;
-        margin: 20px;
-    }
-
-    .four-cards {
-        background: url('/images/link-images/desktop-design.jpg') center center no-repeat;
-        background-size: cover;
-    }
-
-    .signup-form {
-        background: url('/images/link-images/desktop-design copy.jpg') center center no-repeat;
-        background-size: cover;
-    }
-
-    .pricing-cards {
-        background: url('/images/link-images/active-states.jpg') center center no-repeat;
-        background-size: cover;
-    }
-
-    .overlay-card1, .overlay-card2, .overlay-card3 {
-        position: absolute;
-        display: none;
-        background: rgba(247,120,118, 0.9);
-        box-shadow: 0 0 20px gray;
-        border-radius: 5px;
-        border-top: 2px solid red;
-        height: 400px;
-        width: 400px;
-    }
-
-    .card-title {
-        font-size: 40px;
-        color: white;
-    }
-
-    .four-cards:hover .overlay-card1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .signup-form:hover .overlay-card2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .pricing-cards:hover .overlay-card3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+html {
+    box-sizing: border-box;
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
-@media (max-width: 500px){
-    body {
-        box-sizing: border-box;
-        font-family: 'Baloo Thambi 2', cursive;
-        text-align: center;
-    }
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
 
-    .header {
-        margin: 40px 0;
-    }
+body {
+    text-align: center;
+}
 
-    .flex-container {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
+.header {
+    margin: 2rem;
+}
 
-    .flex-container a {
-        text-decoration: none;
-    }
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-    .flex-item{
-        box-shadow: 0 0 20px gray;
-        border-radius: 5px;
-        border-top: 2px solid red;
-        width: 100%;
-        height: 400px;
-        margin-bottom: 20px;
-    }
+.flex-item{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px gray;
+    border-radius: 5px;
+    border-top: 2px solid red;
+    margin: 20px;
+    text-decoration: none;
+}
 
-    .four-cards {
-        background: url('/images/link-images/desktop-design.jpg') center center no-repeat;
-        background-size: cover;
-    }
+.four-cards {
+    background: url('/images/link-images/desktop-design.jpg') center center no-repeat;
+    background-size: cover;
+}
 
-    .signup-form {
-        background: url('/images/link-images/desktop-design copy.jpg') center center no-repeat;
-        background-size: cover;
-    }
+.signup-form {
+    background: url('/images/link-images/desktop-design copy.jpg') center center no-repeat;
+    background-size: cover;
+}
 
-    .pricing-cards {
-        background: url('/images/link-images/active-states.jpg') center center no-repeat;
-        background-size: cover;
-    }
+.pricing-cards {
+    background: url('/images/link-images/active-states.jpg') center center no-repeat;
+    background-size: cover;
+}
 
-    .overlay-card1, .overlay-card2, .overlay-card3 {
-        position: relative;
-        display: none;
-        background: rgba(247,120,118, 0.9);
-        box-shadow: 0 0 20px gray;
-        border-radius: 5px;
-        border-top: 2px solid red;
-        height: 400px;
-    }
+.four-cards-with-flex {
+    background: url('/images/link-images/desktop-design.jpg') center center no-repeat;
+    background-size: cover;
+}
 
-    .card-title {
-        font-size: 40px;
-        color: white;
-    }
+.overlay-card1, .overlay-card2, .overlay-card3, .overlay-card4 {
+    display: none;
+    background: rgba(247,120,118, 0.9);
+    box-shadow: 0 0 20px gray;
+    border-radius: 5px;
+    border-top: 2px solid red;
+    height: inherit;
+}
 
-    .four-cards:hover .overlay-card1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.card-title {
+    font-size: 40px;
+    color: white;
+}
 
-    .signup-form:hover .overlay-card2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.four-cards:hover .overlay-card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .pricing-cards:hover .overlay-card3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.signup-form:hover .overlay-card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-cards:hover .overlay-card3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four-cards-with-flex:hover .overlay-card4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
