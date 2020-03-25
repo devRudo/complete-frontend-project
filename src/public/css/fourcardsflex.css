@@ -24,12 +24,18 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    background: url('/images/pricing-cards/bg-top.svg') right top no-repeat, url('/images/pricing-cards/bg-bottom.svg') left bottom no-repeat;
+    padding: 30px 150px;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--neutral-color-lightgray);
     padding: 20px;
+    box-shadow: 0 0 2px gray;
 }
 
 .text-contents {
@@ -111,7 +117,10 @@ html {
     border-top: 6px solid var(--primary-color-darkblue);
 }
 
-@media all and (max-width: 475px){
+@media (max-width: 375px){
+    body{
+        padding: 0;
+    }
     .main-container {
         background-color: white;
         padding: 60px 20px;

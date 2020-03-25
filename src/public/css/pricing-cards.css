@@ -8,295 +8,201 @@
     --neutral-color-gb: hsl(233, 13%, 49%);
     --neutral-color-dgb: hsl(232, 13%, 33%)
 }
-@media (max-width: 1920px) and (min-width: 501px) {
-    body {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 15px;
-        padding: 100px 200px;
-    }
 
-    .container {
-        background: var(--neutral-color-vlgb);
-        background-image: url('/images/pricing-cards/bg-bottom.svg'), url('/images/pricing-cards/bg-top.svg');
-        background-position: left bottom, right top;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .main-content{
-        width: 100%;
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--neutral-color-dgb);
-    }
-
-    .main-content .title {
-        margin-bottom: 20px;
-    }
-
-    .plans{
-        color: var(--neutral-color-lgb);
-        display: flex;
-        justify-content: center;
-    }
-    .plans span {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    .plans input {
-        width: 50px;
-        background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        -webkit-appearance: none;
-        appearance: none;
-        padding: 2px;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .plans input:focus {
-        outline: none;
-    }
-
-    .plans input::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background: var(--neutral-color-vlgb);
-        border-radius: 50%;
-    }
-
-    .card-container {
-        padding: 60px 100px;
-        display: flex;
-    }
-
-    #annually {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #monthly {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card {
-        width: 300px;
-        background: white;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
-        box-shadow: 0 0 40px rgba(150, 150, 150, 0.6);
-    }
-
-    .card h3 {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 20px;
-        margin-bottom: 20px;
-    }
-
-    .card .pricing{
-        font-size: 46px;
-        text-align: center;
-    }
-
-    .card a {
-        padding: 10px;
-        background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        border: none;
-        border-radius: 5px;
-        text-transform: uppercase;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .features{
-        margin: 20px 0;
-    }
-    .features p{
-        border-top: 1px solid var(--neutral-color-lgb);
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
-    }
-
-    .features p:last-child {
-        border-bottom: 1px solid var(--neutral-color-lgb);
-    }
-
-    .card.basic{
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .card.master{
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-
-    .card-active {
-        background: linear-gradient(to bottom, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        color: white;
-    }
-
-    .card-active {
-        padding: 60px 20px;
-    }
-
-    .card-active a {
-        background: white;
-        color: var(--neutral-color-dgb);
-        font-weight: 700;
-    }
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
-@media (max-width: 500px) {
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 100px 200px;
+}
+
+.container {
+    background: var(--neutral-color-vlgb);
+    background-image: url('/images/pricing-cards/bg-bottom.svg'), url('/images/pricing-cards/bg-top.svg');
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content{
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--neutral-color-dgb);
+}
+
+.main-content .title {
+    margin-bottom: 20px;
+}
+
+.plans{
+    color: var(--neutral-color-lgb);
+    display: flex;
+    justify-content: center;
+}
+.plans span {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.plans input {
+    width: 50px;
+    background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.plans input:focus {
+    outline: none;
+}
+
+.plans input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--neutral-color-vlgb);
+    border-radius: 50%;
+}
+
+.card-container {
+    padding: 60px 100px;
+    display: flex;
+}
+
+#annually {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#monthly {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(150, 150, 150, 0.6);
+}
+
+.card h3 {
+    font-size: 15px;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.card .pricing{
+    font-size: 46px;
+    text-align: center;
+}
+
+.card a {
+    padding: 10px;
+    background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.features{
+    margin: 20px 0;
+}
+.features p{
+    border-top: 1px solid var(--neutral-color-lgb);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.features p:last-child {
+    border-bottom: 1px solid var(--neutral-color-lgb);
+}
+
+.card.basic{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card.master{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card-active {
+    background: linear-gradient(to bottom, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
+    color: white;
+}
+
+.card-active {
+    padding: 60px 20px;
+}
+
+.card-active a {
+    background: white;
+    color: var(--neutral-color-dgb);
+    font-weight: 700;
+}
+
+@media (max-width: 375px) {
     body {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 15px;
+        padding: 0;
     }
 
     .container {
-        background: var(--neutral-color-vlgb);
         background-image: url('/images/pricing-cards/bg-top.svg');
         background-position: right top;
-        background-position-x: 300px;
-        background-repeat: no-repeat;
-    }
-
-    .main-content{
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--neutral-color-dgb);
-    }
-
-    .main-content .title {
-        margin-bottom: 20px;
-    }
-
-    .plans{
-        color: var(--neutral-color-lgb);
-        display: flex;
-        justify-content: center;
-    }
-    .plans span {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    .plans input {
-        width: 50px;
-        background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        -webkit-appearance: none;
-        appearance: none;
-        padding: 2px;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .plans input:focus {
-        outline: none;
-    }
-
-    .plans input::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background: var(--neutral-color-vlgb);
-        border-radius: 50%;
+        background-position-x: 250px;
     }
 
     .card-container {
         margin-top: 80px;
+        padding: 0;
     }
 
     #annually {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     #monthly {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .card {
-        width: 300px;
-        background: white;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
-        margin: 30px;
-        box-shadow: 0 0 40px rgba(150, 150, 150, 0.6);
-    }
-
-    .card h3 {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 20px;
-        margin-bottom: 20px;
-    }
-
-    .card .pricing{
-        font-size: 46px;
-        text-align: center;
-    }
-
-    .card a {
-        padding: 10px;
-        background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        border: none;
-        border-radius: 5px;
-        text-transform: uppercase;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .features{
         margin: 20px 0;
     }
-    .features p{
-        border-top: 1px solid var(--neutral-color-lgb);
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
+
+    .card.basic{
+        border-radius: 10px;
     }
 
-    .features p:last-child {
-        border-bottom: 1px solid var(--neutral-color-lgb);
-    }
-
-    .card-active {
-        background: linear-gradient(to bottom, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
-        color: white;
-    }
-
-    .card-active {
-        padding: 60px 20px;
-    }
-
-    .card-active a {
-        background: white;
-        color: var(--neutral-color-dgb);
-        font-weight: 700;
+    .card.master {
+        border-radius: 10px;
     }
 }
