@@ -13,7 +13,6 @@ let validateForm = () => {
         document.getElementById('first_name').style.border = "2px solid var(--primary-color-red)";
         document.getElementById('first_name').style.background = "url('/images/signup-form/icon-error.svg') right center no-repeat";
         document.getElementById('first_name').style.backgroundOrigin = "content-box";
-        return false;
     }
     else {
         firstname_error.innerText = "";
@@ -27,7 +26,6 @@ let validateForm = () => {
         document.getElementById('last_name').style.border = "2px solid var(--primary-color-red)";
         document.getElementById('last_name').style.background = "url('/images/signup-form/icon-error.svg') right center no-repeat";
         document.getElementById('last_name').style.backgroundOrigin = "content-box";
-        return false;
     }
     else {
         lastname_error.innerText = "";
@@ -41,7 +39,6 @@ let validateForm = () => {
         document.getElementById('email').style.border = "2px solid var(--primary-color-red)";
         document.getElementById('email').style.background = "url('/images/signup-form/icon-error.svg') right center no-repeat";
         document.getElementById('email').style.backgroundOrigin = "content-box";
-        return false;
     }
     else {
         email_error.innerText = "";
@@ -55,7 +52,6 @@ let validateForm = () => {
         document.getElementById('password').style.border = "2px solid var(--primary-color-red)";
         document.getElementById('password').style.background = "url('/images/signup-form/icon-error.svg') right center no-repeat";
         document.getElementById('password').style.backgroundOrigin = "content-box";
-        return false;
     }
     else {
         password_error.innerText = "";
@@ -63,11 +59,11 @@ let validateForm = () => {
         document.getElementById('password').style.background = "url('/images/signup-form/tick.svg') right center no-repeat";
         document.getElementById('password').style.backgroundOrigin = "content-box";
     }
-    return true;
 };
 
 document.getElementById('submit').addEventListener('click', (event) => {
     if (!validateForm()) {
         event.preventDefault();
+        return true;
     }
 });
