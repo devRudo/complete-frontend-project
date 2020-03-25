@@ -99,18 +99,6 @@ body {
     font-size: 0.9rem;
 }
 
-.form input:required:focus:valid {
-    border: 2px solid var(--primary-color-green);
-}
-
-.form input:required:focus:invalid {
-    border: 2px solid var(--primary-color-red);
-    background: url('/images/signup-form/icon-error.svg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-origin: content-box;
-}
-
 .submit {
     padding: 20px;
     margin: 20px 0;
@@ -122,6 +110,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     box-shadow: 0 7px 0px rgba(76,180,141, 1);
+    cursor: pointer;
 }
 
 .form:last-child {
