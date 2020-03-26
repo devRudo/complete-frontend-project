@@ -80,7 +80,7 @@ body {
 }
 
 .card-container {
-    padding: 60px 100px;
+    padding: 3rem;
     display: flex;
 }
 
@@ -168,6 +168,20 @@ body {
     background: white;
     color: var(--neutral-color-dgb);
     font-weight: 700;
+}
+
+@media (max-width: 1440px) and (min-width: 476px){
+    body{
+        padding: 0;
+    }
+
+    .card{
+        width: 250px;
+        padding: 10px;
+    }
+    .card-active {
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 375px) {

@@ -121,6 +121,24 @@ body {
     color: var(--primary-color-red);
 }
 
+@media (max-width: 1440px) and (min-width: 476px){
+    body {
+        padding: 0;
+    }
+    .flex-container {
+        padding: 40px;
+    }
+    .text-content {
+        width: 100%;
+    }
+    .form-content {
+        width: 100%;
+    }
+    .form {
+        padding: 20px;
+    }
+}
+
 @media (max-width: 375px) {
     body {
         padding: 0;

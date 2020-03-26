@@ -117,7 +117,13 @@ body {
     border-top: 6px solid var(--primary-color-darkblue);
 }
 
-@media (max-width: 375px){
+@media (max-width: 1440px) and (min-width: 476px){
+    .cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 475px){
     body{
         padding: 0;
     }
