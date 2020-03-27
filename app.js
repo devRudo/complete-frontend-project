@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const cwd = process.cwd();
 const config = require(path.join(cwd, '/config/config'));
@@ -12,6 +13,8 @@ if (config.NODE_ENV !== 'production') {
 const port = config.port;
 
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(cwd, '/src/public')));
 
 app.set('views', viewsDirectory);
@@ -26,6 +29,10 @@ app.get('/four-cards', (request, response) => {
 
 app.get('/signup-form', (request, response) => {
     response.render('signup-form');
+});
+
+app.post('/signup-form', (request, response) => {
+    response.json(request.body);
 });
 
 app.get('/pricing-cards', (request, response) => {

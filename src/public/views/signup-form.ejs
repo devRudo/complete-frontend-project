@@ -20,16 +20,16 @@
                 </div>
                 <div class="flex-item form-content">
                     <p class="form-title"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
-                    <form action="" id="signup-form" class="form" method="get" novalidate>
-                        <input type="text" id="first_name" name="first_name" placeholder="First Name" onkeyup="return validateForm()">
+                    <form action="/signup-form" id="signup-form" class="form" method="post" novalidate>
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" onkeyup="return validateFirstName()">
                         <span id="firstname_error"></span>
-                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" onkeyup="return validateForm()">
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" onkeyup="return validateLastName()">
                         <span id="lastname_error"></span>
-                        <input type="email" id="email" name="email" placeholder="Email Address" onkeyup="return validateForm()">
+                        <input type="email" id="email" name="email" placeholder="Email Address" onkeyup="return validateEmail()">
                         <span id="email_error"></span>
-                        <input type="password" id="password" name="password" placeholder="Password" onkeyup="return validateForm()">
+                        <input type="password" id="password" name="password" placeholder="Password" onkeyup="return validatePassword()">
                         <span id="password_error"></span>
-                        <button type="submit" id="submit" name="submit" class="submit">Claim your free trial</button>
+                        <button type="submit" id="submit" class="submit">Claim your free trial</button>
                         <small>By clicking the button, you are agreeing to our <b class="text-red">Terms and Services</b></small>
                     </form>
                 </div>

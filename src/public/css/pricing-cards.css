@@ -170,7 +170,7 @@ body {
     font-weight: 700;
 }
 
-@media (max-width: 1440px) and (min-width: 476px){
+@media (max-width: 1440px) and (min-width: 1025px){
     body{
         padding: 0;
     }
@@ -182,6 +182,34 @@ body {
     .card-active {
         padding: 2rem;
     }
+}
+
+@media (max-width: 1025px) and (min-width: 476px){
+    body {
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .main-content {
+        padding: 60px 20px;
+    }
+
+    .card-container {
+        padding: 3rem 1rem;
+    }
+
+    .card{
+        width: 200px;
+        padding: 10px;
+    }
+
+    .card .pricing{
+        font-size: 30px;
+    }
+
+    .card-active {
+        padding: 30px 10px;
+    }
+
 }
 
 @media (max-width: 475px) {
