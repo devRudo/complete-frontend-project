@@ -2,19 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("annually").style.display = "flex";
     document.getElementById("monthly").style.display = "none";
     document.getElementById('mode').addEventListener('change', () => {
-        console.log(document.getElementById('mode').value);
-        if (document.getElementById('mode').value == 0) {
+        if (!document.getElementById('mode').checked) {
             document.getElementById("annually").style.display = "flex";
             document.getElementById("monthly").style.display = "none";
         }
-        else if (document.getElementById('mode').value == 1) {
+        else if (document.getElementById('mode').checked) {
             document.getElementById("annually").style.display = "none";
             document.getElementById("monthly").style.display = "flex";
         }
     });
     let cards = document.getElementsByClassName('card');
     for (let i = 0; i < cards.length; i++) {
-        cards[i].addEventListener('click', function () {
+        cards[i].addEventListener('mouseover', function () {
             let siblings = [...cards[i].parentElement.children];
             siblings = siblings.filter((elem) => elem.classList.contains('card-active'));
             siblings[0].classList.remove('card-active');

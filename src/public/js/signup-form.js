@@ -94,6 +94,10 @@ let validatePassword = () => {
 }
 
 document.getElementById('submit').addEventListener('click', (event) => {
+    validateFirstName();
+    validateLastName();
+    validateEmail();
+    validatePassword();
     if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePassword()) {
         event.preventDefault();
     }

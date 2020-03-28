@@ -57,26 +57,35 @@ body {
     margin-left: 20px;
 }
 .plans input {
-    width: 50px;
+    position: relative;
+    width: 40px;
+    height: 20px;
     background: linear-gradient(to right, var(--primary-color-gradient-start), var(--primary-color-gradient-end));
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
     padding: 2px;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.1s;
 }
 
-.plans input:focus {
-    outline: none;
-}
-
-.plans input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
+.plans input::before{
+    content: '';
+    position: absolute;
     width: 20px;
     height: 20px;
-    background: var(--neutral-color-vlgb);
     border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.plans input:checked::before {
+    left: 20px;
 }
 
 .card-container {
